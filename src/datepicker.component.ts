@@ -207,6 +207,7 @@ interface ValidationResult {
       class="datepicker"
       [ngStyle]="{'font-family': fontFamily}"
     >
+      <!-- Removing input box
       <input
         [disabled]="disabled"
         class="datepicker__input"
@@ -218,6 +219,7 @@ interface ValidationResult {
         [(ngModel)]="inputText"
         readonly="true"
       >
+      -->
       <div
         class="datepicker__calendar"
         *ngIf="showCalendar"
@@ -364,7 +366,7 @@ export class DatepickerComponent implements OnInit, OnChanges {
   constructor(private renderer: Renderer, private elementRef: ElementRef) {
     this.dateFormat = this.DEFAULT_FORMAT;
     // view logic
-    this.showCalendar = false;
+    this.showCalendar = true;
     // colors
     this.colors = {
       'black': '#333333',
