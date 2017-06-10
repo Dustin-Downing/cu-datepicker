@@ -47,9 +47,9 @@ interface ValidationResult {
         position: absolute;
         overflow: hidden;
         z-index: 1000;
-        top: 1.9em;
-        left: 0;
-        height: 23.8em;
+        top: -1.1em;
+        left: -19em;
+        height: 19.8em;
         width: 20.5em;
         font-size: 14px;
         background-color: #ffffff;
@@ -303,12 +303,14 @@ interface ValidationResult {
               </span>
             </div>
           </div>
+          <!-- Removing cancel box
           <div
             class="datepicker__calendar__cancel"
             (click)="onCancel()"
           >
             {{cancelText}}
           </div>
+          -->
         </div>
       </div>
     </div>
@@ -374,7 +376,7 @@ export class DatepickerComponent implements OnInit, OnChanges {
       'lightGrey': '#f1f1f1',
       'white': '#ffffff'
     };
-    this.accentColor = this.colors['blue'];
+    this.accentColor = '#a875fe';
     this.altInputStyle = false;
     // time
     this.updateDayNames();
