@@ -49,7 +49,7 @@ interface ValidationResult {
         z-index: 1000;
         top: -1.1em;
         left: -19em;
-        height: 19.8em;
+        height: 21.3em;
         width: 20.5em;
         font-size: 14px;
         background-color: #ffffff;
