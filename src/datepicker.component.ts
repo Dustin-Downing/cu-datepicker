@@ -323,9 +323,16 @@ export class DatepickerComponent implements OnInit, OnChanges {
   // two way bindings
   @Output() dateChange = new EventEmitter<Date>();
 
-  @Input() get date(): Date { return this.dateVal; };
+  @Input() get date(): Date {
+    return this.dateVal;
+  };
   set date(val: Date) {
-    this.dateVal = val;
+    if(typeof val === "string") {
+      this.dateVal =  new Date(val);
+      if(isNaN(this.dateVal.getMonth())) this.dateVal = new Date();
+    } else {
+      this.dateVal = val;
+    }
     this.dateChange.emit(val);
   }
   // api bindings
