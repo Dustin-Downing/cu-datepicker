@@ -48,7 +48,8 @@ interface ValidationResult {
         overflow: hidden;
         z-index: 1000;
         top: -1.1em;
-        left: -19em;
+        left: auto;
+        right: 0;
         height: 21.3em;
         width: 20.5em;
         font-size: 14px;
@@ -341,7 +342,7 @@ export class DatepickerComponent implements OnInit, OnChanges {
       default:
         this.dateVal = val;
     }
-    if(isNaN(this.dateVal.getMonth())) this.dateVal = new Date();
+    if(!this.dateVal || isNaN(this.dateVal.getMonth())) this.dateVal = new Date();
     this.dateChange.emit(this.dateVal);
   }
   // api bindings
