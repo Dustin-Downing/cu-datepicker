@@ -48,7 +48,7 @@ interface ValidationResult {
         overflow: hidden;
         z-index: 1000;
         top: -1.1em;
-        left: auto;
+        left: -15em;
         right: 0;
         height: 21.3em;
         width: 20.5em;
