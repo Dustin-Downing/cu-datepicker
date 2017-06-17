@@ -47,9 +47,6 @@ interface ValidationResult {
         position: absolute;
         overflow: hidden;
         z-index: 1000;
-        top: -1.1em;
-        left: -15em;
-        right: 0;
         height: 21.3em;
         width: 20.5em;
         font-size: 14px;
@@ -62,42 +59,6 @@ interface ValidationResult {
              -moz-user-select: none;
               -ms-user-select: none;
                   user-select: none;
-      }
-
-      .due-date_create-task .datepicker__calendar {
-      	top: -1.1em;
-        left: -20.5em;
-        right: 0;
-      }
-
-      .due-date_list-view .datepicker__calendar {
-      	top: -1.1em;
-        left: -7.2em;
-        right: 0;
-      }
-
-      .due-date_view-task .datepicker__calendar {
-      	top: -1.1em;
-        left: -7.6em;
-        right: 0;
-      }
-
-      .due-date_create-subtask .datepicker__calendar {
-      	top: -1.1em;
-        left: -7.6em;
-        right: 0;
-      }
-
-      .due-date_board-view .datepicker__calendar {
-      	top: -1.1em;
-        left: -7.1em;
-        right: 0;
-      }
-
-      .cu-dashboard-board__column .due-date_board-view .datepicker__calendar {
-      	top: -1.1em;
-        left: -4em;
-        right: 0;
       }
 
       .datepicker__calendar__cancel {
