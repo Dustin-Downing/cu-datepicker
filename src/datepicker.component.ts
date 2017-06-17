@@ -123,9 +123,7 @@ interface ValidationResult {
       }
 
       .datepicker__calendar__month__day:hover {
-        cursor: pointer;
-        background-color: rgba(168, 117, 254, 0.25);
-        color: rgb(51, 51, 51);
+        background-color: rgba(168, 117, 254, 0.25) !important;
       }
 
       .datepicker__calendar__nav {
