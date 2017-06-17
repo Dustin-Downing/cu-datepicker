@@ -122,6 +122,12 @@ interface ValidationResult {
         transition: 0.37s;
       }
 
+      .datepicker__calendar__month__day:hover {
+        cursor: pointer;
+        background-color: rgba(168, 117, 254, 0.25);
+        color: rgb(51, 51, 51);
+      }
+
       .datepicker__calendar__nav {
         display: -webkit-box;
         display: -ms-flexbox;
