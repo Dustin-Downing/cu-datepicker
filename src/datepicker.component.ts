@@ -660,9 +660,9 @@ export class DatepickerComponent implements OnInit, OnChanges {
   */
   getDayBackgroundColor(day: Date): string {
     let color = this.colors['white'];
-    if (this.isChosenDay(day)) {
+    if (this.isCurrentDay(day)) {
       color = this.accentColor;
-    } else if (this.isCurrentDay(day)) {
+    } else if (this.isChosenDay(day)) {
       color = this.colors['lightGrey'];
     }
     return color;
