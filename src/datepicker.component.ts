@@ -360,6 +360,7 @@ export class DatepickerComponent implements OnInit, OnChanges {
   @Input() inputText: string;
   // view logic
   @Input() showCalendar: boolean;
+  @Input() alwaysVisible: boolean;
   @Input() cancelText: string = 'Cancel';
   @Input() weekStart: number = 0;
   // events
@@ -388,6 +389,7 @@ export class DatepickerComponent implements OnInit, OnChanges {
     this.dateFormat = this.DEFAULT_FORMAT;
     // view logic
     this.showCalendar = true;
+    this.alwaysVisible = false;
     // colors
     this.colors = {
       'black': '#333333',
@@ -447,7 +449,10 @@ export class DatepickerComponent implements OnInit, OnChanges {
   * or month associated with the selected date
   */
   closeCalendar(): void {
-    this.showCalendar = false;
+    if (!this.alwaysVisible) {
+      this.showCalendar = false;
+    }
+
     this.syncVisualsWithDate();
   }
 
@@ -612,7 +617,9 @@ export class DatepickerComponent implements OnInit, OnChanges {
   * Toggles the calendar when the date input is clicked
   */
   onInputClick(): void {
-    this.showCalendar = !this.showCalendar;
+    if (!this.alwaysVisible) {
+      this.showCalendar = !this.showCalendar;
+    }
   }
 
   /**
@@ -622,7 +629,9 @@ export class DatepickerComponent implements OnInit, OnChanges {
     if (this.isDateValid(day)) {
       this.date = day;
       this.onSelect.emit(day);
-      this.showCalendar = !this.showCalendar;
+      if (!this.alwaysVisible) {
+        this.showCalendar = !this.showCalendar;
+      }
     }
   }
 
