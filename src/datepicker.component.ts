@@ -52,49 +52,13 @@ interface ValidationResult {
         font-size: 14px;
         background-color: #ffffff;
         box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.1);
-    	border-radius: 6px;
+    	  border-radius: 6px;
         cursor: default;
         -webkit-touch-callout: none;
           -webkit-user-select: none;
              -moz-user-select: none;
               -ms-user-select: none;
                   user-select: none;
-      }
-
-      .due-date_create-task .datepicker__calendar {
-        top: -1.1em;
-        left: -20.5em;
-        right: 0;
-      }
-
-      .due-date_list-view .datepicker__calendar {
-        top: -1.1em;
-        left: -7.2em;
-        right: 0;
-      }
-
-      .due-date_view-task .datepicker__calendar {
-        top: -1.1em;
-        left: -7.6em;
-        right: 0;
-      }
-
-      .due-date_create-subtask .datepicker__calendar {
-        top: -1.1em;
-        left: -7.6em;
-        right: 0;
-      }
-
-      .due-date_board-view .datepicker__calendar {
-        top: -1.1em;
-        left: -7.1em;
-        right: 0;
-      }
-
-      .cu-dashboard-board__column .due-date_board-view .datepicker__calendar {
-        top: -1.1em;
-        left: -4em;
-        right: 0;
       }
 
       .datepicker__calendar__cancel {
@@ -160,7 +124,7 @@ interface ValidationResult {
 
       .datepicker__calendar__month__day:hover {
         background-color: rgba(168, 117, 254, 0.25) !important;
-        color: #ffffff;
+        color: #a875ff;
       }
 
       .datepicker__calendar__nav {
@@ -431,7 +395,7 @@ export class DatepickerComponent implements OnInit, OnChanges {
     this.colors = {
       'black': '#333333',
       'blue': '#1285bf',
-      'lightGrey': '#f1f1f1',
+      'lightGrey': '#e9dcff',
       'white': '#ffffff'
     };
     this.accentColor = '#a875fe';
