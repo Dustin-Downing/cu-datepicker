@@ -124,7 +124,7 @@ interface ValidationResult {
 
       .datepicker__calendar__month__day:hover {
         background-color: rgba(168, 117, 254, 0.25) !important;
-        color: #a875ff;
+        color: #a875ff !important;
       }
 
       .datepicker__calendar__nav {
