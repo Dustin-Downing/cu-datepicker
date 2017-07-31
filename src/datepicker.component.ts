@@ -61,6 +61,42 @@ interface ValidationResult {
                   user-select: none;
       }
 
+      .due-date_create-task .datepicker__calendar {
+        top: -1.1em;
+        left: -20.5em;
+        right: 0;
+      }
+
+      .due-date_list-view .datepicker__calendar {
+        top: -1.1em;
+        left: -7.2em;
+        right: 0;
+      }
+
+      .due-date_view-task .datepicker__calendar {
+        top: -1.1em;
+        left: -7.6em;
+        right: 0;
+      }
+
+      .due-date_create-subtask .datepicker__calendar {
+        top: -1.1em;
+        left: -7.6em;
+        right: 0;
+      }
+
+      .due-date_board-view .datepicker__calendar {
+        top: -1.1em;
+        left: -7.1em;
+        right: 0;
+      }
+
+      .cu-dashboard-board__column .due-date_board-view .datepicker__calendar {
+        top: -1.1em;
+        left: -4em;
+        right: 0;
+      }
+
       .datepicker__calendar__cancel {
         position: absolute;
         bottom: 1em;
