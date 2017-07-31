@@ -396,7 +396,8 @@ export class DatepickerComponent implements OnInit, OnChanges {
       'black': '#333333',
       'blue': '#1285bf',
       'lightGrey': '#e9dcff',
-      'white': '#ffffff'
+      'white': '#ffffff',
+      'purple': '#a875ff'
     };
     this.accentColor = '#a875fe';
     this.altInputStyle = false;
@@ -685,6 +686,8 @@ export class DatepickerComponent implements OnInit, OnChanges {
     let color = this.colors['black'];
     if (this.isChosenDay(day)) {
       color = this.colors['white'];
+    } else if (this.isCurrentDay(day)) {
+      color = this.colors['purple'];
     }
     return color;
   }
