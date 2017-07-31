@@ -684,10 +684,10 @@ export class DatepickerComponent implements OnInit, OnChanges {
   */
   getDayFontColor(day: Date): string {
     let color = this.colors['black'];
-    if (this.isChosenDay(day)) {
-      color = this.colors['purple'];
-    } else if (this.isCurrentDay(day)) {
+    if (this.isCurrentDay(day)) {
       color = this.colors['white'];
+    } else if (this.isChosenDay(day)) {
+      color = this.colors['purple'];
     }
     return color;
   }
