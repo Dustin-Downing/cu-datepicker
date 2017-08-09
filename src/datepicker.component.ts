@@ -40,7 +40,7 @@ interface ValidationResult {
         position: relative;
         display: inline-block;
         color: #2b2b2b;
-        font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'Calibri', 'Roboto';
+        font-family: "Proxima Nova", Arial, serif;
       }
 
       .datepicker__calendar {
@@ -294,6 +294,7 @@ interface ValidationResult {
               *ngFor="let day of calendarDays"
               class="datepicker__calendar__month__day"
               [ngStyle]="{'cursor': day == 0 ? 'initial' : 'pointer',
+                          'border-bottom' : isCurrentDay(day) '1px solid #a875ff' : 'none'
                           'background-color': getDayBackgroundColor(day),
                           'color': isHoveredDay(day) ? accentColor : getDayFontColor(day),
                           'pointer-events': day == 0 ? 'none' : ''
@@ -672,9 +673,9 @@ export class DatepickerComponent implements OnInit, OnChanges {
   getDayBackgroundColor(day: Date): string {
     let color = this.colors['white'];
     if (this.isCurrentDay(day)) {
-      color = this.accentColor;
+      color = this.colors['white'];
     } else if (this.isChosenDay(day)) {
-      color = this.colors['lightGrey'];
+      color = this.colors['purple'];
     }
     return color;
   }
@@ -685,9 +686,9 @@ export class DatepickerComponent implements OnInit, OnChanges {
   getDayFontColor(day: Date): string {
     let color = this.colors['black'];
     if (this.isCurrentDay(day)) {
-      color = this.colors['white'];
-    } else if (this.isChosenDay(day)) {
       color = this.colors['purple'];
+    } else if (this.isChosenDay(day)) {
+      color = this.colors['white'];
     }
     return color;
   }
