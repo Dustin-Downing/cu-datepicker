@@ -294,7 +294,7 @@ interface ValidationResult {
               *ngFor="let day of calendarDays"
               class="datepicker__calendar__month__day"
               [ngStyle]="{'cursor': day == 0 ? 'initial' : 'pointer',
-                          'border-bottom' : isCurrentDay(day) '1px solid #a875ff' : 'none'
+                          'border-bottom' : isCurrentDay(day) '1px solid #a875ff' : 'none',
                           'background-color': getDayBackgroundColor(day),
                           'color': isHoveredDay(day) ? accentColor : getDayFontColor(day),
                           'pointer-events': day == 0 ? 'none' : ''
